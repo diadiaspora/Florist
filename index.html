@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f2ec">
+  <meta name="description" content="Flores extraordinarias, arreglos de autor y suscripciones florales en Miraflores, Lima.">
+  <title>Élan Florale — Flores con intención</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement" data-i18n="announcement">Entrega floral en Miraflores y Lima Metropolitana · Hecho con intención</div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#inicio" aria-label="Élan Florale, inicio">
+      <span class="wordmark-main">ÉLAN <i>FLORALE</i></span>
+      <span class="wordmark-sub" data-i18n="wordmarkSub">ESTUDIO FLORAL · LIMA</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#coleccion" data-i18n="navShop">Colección</a>
+      <a href="#suscripcion" data-i18n="navSubscription">Suscripciones</a>
+      <a href="#estudio" data-i18n="navStudio">El estudio</a>
+      <a href="#entrega" data-i18n="navDelivery">Entregas</a>
+    </nav>
+    <div class="header-actions">
+      <div class="language-switch" aria-label="Language">
+        <button class="lang-btn active" data-lang="es" aria-pressed="true">ES</button>
+        <span>/</span>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="cart-trigger" id="cartTrigger" aria-label="Abrir carrito">
+        <span data-i18n="bag">Bolsa</span><span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="heroEyebrow">FLORES DE AUTOR · MIRAFLORES, LIMA</p>
+        <h1 data-i18n-html="heroTitle">La belleza de<br>decirlo <em>con flores.</em></h1>
+        <p class="hero-description" data-i18n="heroText">Composiciones florales extraordinarias, creadas para transformar los momentos cotidianos en recuerdos imborrables.</p>
+        <div class="hero-buttons">
+          <a class="button button-dark" href="#coleccion" data-i18n="exploreCollection">Explorar colección <span>↗</span></a>
+          <a class="text-link" href="#suscripcion" data-i18n="discoverSubscription">Descubrir suscripciones</a>
+        </div>
+        <div class="hero-note"><span class="note-line"></span><span data-i18n="heroNote">Flores frescas. Diseño consciente. Entrega cuidadosa.</span></div>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-image" src="https://images.unsplash.com/photo-1520763185298-1b434c919e0f?auto=format&fit=crop&w=1400&q=85" alt="Ramo floral elegante en tonos naturales" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=85'">
+        <div class="hero-stamp"><span data-i18n="stampTop">HECHO A MANO</span><b>✳</b><span data-i18n="stampBottom">CON FLORES</span></div>
+        <div class="hero-caption"><span>01 / 03</span><span data-i18n="heroCaption">La colección de temporada</span></div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><span class="trust-icon">✳</span><span data-i18n="trust1">Diseño floral de autor</span></div>
+      <div><span class="trust-icon">✳</span><span data-i18n="trust2">Entrega programada</span></div>
+      <div><span class="trust-icon">✳</span><span data-i18n="trust3">Flores de temporada</span></div>
+    </section>
+
+    <section class="collection section-pad" id="coleccion">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="collectionEyebrow">EL ARTE DE REGALAR</p><h2 data-i18n-html="collectionTitle">Una flor dice mucho.<br><em>Un ramo lo cambia todo.</em></h2></div>
+        <p class="section-intro" data-i18n="collectionText">Piezas florales diseñadas en nuestro estudio de Miraflores. Cada arreglo tiene su propio carácter; las variedades pueden cambiar según la temporada.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar productos">
+        <button class="filter-btn active" data-filter="all" data-i18n="filterAll">Todo</button>
+        <button class="filter-btn" data-filter="signature" data-i18n="filterSignature">Arreglos de autor</button>
+        <button class="filter-btn" data-filter="bouquet" data-i18n="filterBouquets">Ramos</button>
+        <button class="filter-btn" data-filter="vase" data-i18n="filterVases">Flores en jarrón</button>
+      </div>
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-category="signature">
+          <button class="product-image-wrap" data-product="solsticio" aria-label="Ver Solsticio">
+            <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=900&q=80" alt="Arreglo floral cálido en tonos durazno">
+            <span class="product-tag" data-i18n="bestseller">Favorito</span><span class="quick-add">+</span>
+          </button>
+          <div class="product-meta"><div><h3 data-i18n="productSolstice">Solsticio</h3><p data-i18n="productSolsticeDesc">Rosas, ranúnculos y texturas de temporada</p></div><span class="price">S/ 289</span></div>
+          <button class="add-button" data-add="solsticio" data-i18n="addToBag">Añadir a la bolsa</button>
+        </article>
+        <article class="product-card" data-category="bouquet">
+          <button class="product-image-wrap" data-product="jardin" aria-label="Ver Jardín Secreto">
+            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80" alt="Ramo de flores frescas en tonos rosados">
+            <span class="quick-add">+</span>
+          </button>
+          <div class="product-meta"><div><h3 data-i18n="productGarden">Jardín secreto</h3><p data-i18n="productGardenDesc">Flores silvestres con movimiento natural</p></div><span class="price">S/ 219</span></div>
+          <button class="add-button" data-add="jardin" data-i18n="addToBag">Añadir a la bolsa</button>
+        </article>
+        <article class="product-card" data-category="vase">
+          <button class="product-image-wrap" data-product="calma" aria-label="Ver Calma">
+            <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=900&q=80" alt="Arreglo floral blanco y verde en jarrón">
+            <span class="product-tag product-tag-light" data-i18n="newArrival">Novedad</span><span class="quick-add">+</span>
+          </button>
+          <div class="product-meta"><div><h3 data-i18n="productCalm">Calma</h3><p data-i18n="productCalmDesc">Paleta serena en jarrón de cerámica</p></div><span class="price">S/ 329</span></div>
+          <button class="add-button" data-add="calma" data-i18n="addToBag">Añadir a la bolsa</button>
+        </article>
+        <article class="product-card" data-category="signature">
+          <button class="product-image-wrap" data-product="terracota" aria-label="Ver Terracota">
+            <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=900&q=80" alt="Composición floral en tonos tierra">
+            <span class="quick-add">+</span>
+          </button>
+          <div class="product-meta"><div><h3 data-i18n="productTerra">Terracota</h3><p data-i18n="productTerraDesc">Tonos tierra, flores escultóricas y follaje</p></div><span class="price">S/ 269</span></div>
+          <button class="add-button" data-add="terracota" data-i18n="addToBag">Añadir a la bolsa</button>
+        </article>
+        <article class="product-card" data-category="bouquet">
+          <button class="product-image-wrap" data-product="romance" aria-label="Ver Romance">
+            <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=900&q=80" alt="Ramo romántico de rosas">
+            <span class="quick-add">+</span>
+          </button>
+          <div class="product-meta"><div><h3 data-i18n="productRomance">Romance</h3><p data-i18n="productRomanceDesc">Rosas seleccionadas y envoltura de algodón</p></div><span class="price">S/ 249</span></div>
+          <button class="add-button" data-add="romance" data-i18n="addToBag">Añadir a la bolsa</button>
+        </article>
+        <article class="product-card" data-category="vase">
+          <button class="product-image-wrap" data-product="atelier" aria-label="Ver Atelier">
+            <img src="https://images.unsplash.com/photo-1457089328109-e5d9bd499191?auto=format&fit=crop&w=900&q=80" alt="Flores de diseño en un recipiente minimalista">
+            <span class="quick-add">+</span>
+          </button>
+          <div class="product-meta"><div><h3 data-i18n="productAtelier">Atelier</h3><p data-i18n="productAtelierDesc">Una pieza contemporánea para interiores</p></div><span class="price">S/ 379</span></div>
+          <button class="add-button" data-add="atelier" data-i18n="addToBag">Añadir a la bolsa</button>
+        </article>
+      </div>
+      <p class="season-note" data-i18n="seasonNote">Cada arreglo se crea a mano. Si una flor no está disponible, elegiremos una alternativa de igual calidad y belleza.</p>
+    </section>
+
+    <section class="subscription" id="suscripcion">
+      <div class="subscription-image"><img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=1200&q=85" alt="Flores frescas para una suscripción floral"></div>
+      <div class="subscription-copy">
+        <p class="eyebrow" data-i18n="subEyebrow">FLORES, UNA Y OTRA VEZ</p>
+        <h2 data-i18n-html="subTitle">Un pequeño lujo.<br><em>Todos los meses.</em></h2>
+        <p data-i18n="subText">Una selección de flores de temporada, compuesta por nuestro estudio y entregada en la fecha que elijas. Para tu hogar, tu espacio de trabajo o alguien especial.</p>
+        <div class="plan-list">
+          <label class="plan-option selected">
+            <input type="radio" name="plan" value="esencial" checked>
+            <span class="plan-radio"></span><span class="plan-details"><strong data-i18n="planEssential">Esencial</strong><small data-i18n="planEssentialDesc">Un ramo delicado · 1 entrega al mes</small></span><span class="plan-price">S/ 179<span data-i18n="perMonth">/mes</span></span>
+          </label>
+          <label class="plan-option">
+            <input type="radio" name="plan" value="signature">
+            <span class="plan-radio"></span><span class="plan-details"><strong data-i18n="planSignature">Signature</strong><small data-i18n="planSignatureDesc">Una composición generosa · 1 entrega al mes</small></span><span class="plan-price">S/ 289<span data-i18n="perMonth">/mes</span></span>
+          </label>
+          <label class="plan-option">
+            <input type="radio" name="plan" value="atelier">
+            <span class="plan-radio"></span><span class="plan-details"><strong data-i18n="planAtelier">Atelier</strong><small data-i18n="planAtelierDesc">Flores premium para espacios especiales</small></span><span class="plan-price">S/ 429<span data-i18n="perMonth">/mes</span></span>
+          </label>
+        </div>
+        <div class="subscription-controls">
+          <label for="subFrequency" data-i18n="frequencyLabel">Frecuencia de entrega</label>
+          <select id="subFrequency"><option value="monthly" data-i18n="monthly">Mensual</option><option value="twice" data-i18n="twiceMonthly">Dos veces al mes (+80%)</option></select>
+          <button class="button button-dark button-full" id="subscribeButton" data-i18n="startSubscription">Elegir mi suscripción <span>↗</span></button>
+          <p class="fine-print" data-i18n="subFinePrint">La suscripción se confirma por WhatsApp antes del primer cobro. Sin cargos automáticos en esta demo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="studio section-pad" id="estudio">
+      <div class="studio-copy">
+        <p class="eyebrow" data-i18n="studioEyebrow">NUESTRO ESTUDIO</p>
+        <h2 data-i18n-html="studioTitle">La naturaleza,<br><em>con otra mirada.</em></h2>
+        <p data-i18n="studioText">En Élan Florale creemos que las flores no necesitan una ocasión. Trabajamos con color, forma y textura para crear composiciones que se sienten personales, espontáneas y atemporales.</p>
+        <a class="text-link dark-link" href="#entrega" data-i18n="visitDelivery">Conoce nuestro servicio de entrega ↗</a>
+      </div>
+      <div class="studio-photo"><img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=1000&q=80" alt="Detalle de flores en el estudio" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=1000&q=80'"><span class="photo-caption" data-i18n="studioCaption">Composiciones hechas a mano en Lima</span></div>
+    </section>
+
+    <section class="delivery-section" id="entrega">
+      <div class="delivery-heading"><p class="eyebrow" data-i18n="deliveryEyebrow">DEL ESTUDIO A TU PUERTA</p><h2 data-i18n-html="deliveryTitle">Cada detalle,<br><em>bien cuidado.</em></h2></div>
+      <div class="delivery-grid">
+        <article><span class="delivery-number">01</span><h3 data-i18n="delivery1Title">Entrega local</h3><p data-i18n="delivery1Text">Entregamos en Miraflores y distritos seleccionados de Lima Metropolitana. Consulta cobertura antes de confirmar.</p></article>
+        <article><span class="delivery-number">02</span><h3 data-i18n="delivery2Title">Elige tu momento</h3><p data-i18n="delivery2Text">Indica la fecha y una franja horaria preferida. Coordinaremos contigo la disponibilidad por WhatsApp.</p></article>
+        <article><span class="delivery-number">03</span><h3 data-i18n="delivery3Title">Un regalo personal</h3><p data-i18n="delivery3Text">Añade un mensaje para esa persona especial. Podemos incluir una tarjeta escrita a mano.</p></article>
+      </div>
+      <a class="button button-outline" href="#contacto" data-i18n="checkCoverage">Consultar cobertura de entrega <span>↗</span></a>
+    </section>
+
+    <section class="newsletter">
+      <div><p class="eyebrow" data-i18n="newsletterEyebrow">NOTAS FLORALES</p><h2 data-i18n-html="newsletterTitle">Un poco de belleza<br><em>en tu bandeja de entrada.</em></h2></div>
+      <form id="newsletterForm" class="newsletter-form"><label class="sr-only" for="newsletterEmail" data-i18n="emailLabel">Correo electrónico</label><input id="newsletterEmail" type="email" required placeholder="Tu correo electrónico"><button type="submit" aria-label="Suscribirse">↗</button><p class="form-feedback" id="newsletterFeedback" aria-live="polite"></p></form>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <div class="footer-brand"><a class="wordmark footer-wordmark" href="#inicio"><span class="wordmark-main">ÉLAN <i>FLORALE</i></span><span class="wordmark-sub" data-i18n="wordmarkSub">ESTUDIO FLORAL · LIMA</span></a><p data-i18n="footerText">Flores de autor para celebrar lo extraordinario de cada día.</p></div>
+    <div class="footer-column"><h4 data-i18n="footerExplore">EXPLORA</h4><a href="#coleccion" data-i18n="navShop">Colección</a><a href="#suscripcion" data-i18n="navSubscription">Suscripciones</a><a href="#estudio" data-i18n="navStudio">El estudio</a></div>
+    <div class="footer-column"><h4 data-i18n="footerHelp">TE AYUDAMOS</h4><a href="#entrega" data-i18n="navDelivery">Entregas</a><a href="mailto:hola@elanflorale.pe" data-i18n="contactUs">Escríbenos</a><a href="#" id="whatsappLink" target="_blank" rel="noopener" data-i18n="whatsapp">WhatsApp</a></div>
+    <div class="footer-contact"><h4 data-i18n="footerVisit">ENCUÉNTRANOS</h4><p>Miraflores, Lima<br>Perú</p><p>hola@elanflorale.pe</p><span>© <span id="year"></span> Élan Florale</span></div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="cart-head"><div><p class="eyebrow" data-i18n="yourBag">TU BOLSA</p><h2 data-i18n="bagTitle">Flores para ti.</h2></div><button id="closeCart" class="close-cart" aria-label="Cerrar carrito">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty-cart" data-i18n="emptyCart">Tu bolsa está esperando algo bonito.</p></div>
+    <div class="cart-bottom"><div class="cart-total"><span data-i18n="subtotal">Subtotal</span><strong id="cartSubtotal">S/ 0</strong></div><p class="cart-delivery-note" data-i18n="deliveryCalculated">El costo de entrega se confirma según el distrito.</p><button class="button button-dark button-full" id="checkoutButton" data-i18n="continueOrder">Continuar pedido <span>↗</span></button><p class="fine-print" data-i18n="checkoutNote">Demo de tienda: el pedido se coordina por WhatsApp.</p></div>
+  </aside>
+
+  <dialog id="orderDialog" class="order-dialog">
+    <button class="dialog-close" id="closeOrderDialog" aria-label="Cerrar">×</button>
+    <p class="eyebrow" data-i18n="orderEyebrow">UN ÚLTIMO DETALLE</p>
+    <h2 data-i18n="orderTitle">¿Dónde entregamos?</h2>
+    <form id="orderForm">
+      <label><span data-i18n="nameLabel">Tu nombre</span><input name="name" required autocomplete="name"></label>
+      <label><span data-i18n="phoneLabel">WhatsApp / teléfono</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+51 999 999 999"></label>
+      <label><span data-i18n="districtLabel">Distrito de entrega</span><select name="district" required><option value="" data-i18n="chooseDistrict">Selecciona un distrito</option><option>Miraflores</option><option>San Isidro</option><option>Barranco</option><option>Surco</option><option>San Borja</option><option>Otro distrito</option></select></label>
+      <label><span data-i18n="addressLabel">Dirección completa</span><input name="address" required autocomplete="street-address"></label>
+      <label><span data-i18n="dateLabel">Fecha preferida de entrega</span><input name="date" type="date" required></label>
+      <label><span data-i18n="messageLabel">Mensaje para la tarjeta (opcional)</span><textarea name="message" rows="3"></textarea></label>
+      <button class="button button-dark button-full" type="submit" data-i18n="sendWhatsApp">Coordinar por WhatsApp ↗</button>
+      <p class="fine-print" data-i18n="privacyNote">Tus datos se usarán únicamente para coordinar este pedido.</p>
+    </form>
+  </dialog>
+
+  <dialog id="subscriptionDialog" class="order-dialog">
+    <button class="dialog-close" id="closeSubscriptionDialog" aria-label="Cerrar">×</button>
+    <p class="eyebrow" data-i18n="subDialogEyebrow">TU RITUAL FLORAL</p>
+    <h2 data-i18n="subDialogTitle">Llevemos flores a tu mes.</h2>
+    <p id="selectedPlanSummary" class="dialog-summary"></p>
+    <form id="subscriptionForm">
+      <label><span data-i18n="nameLabel">Tu nombre</span><input name="name" required autocomplete="name"></label>
+      <label><span data-i18n="phoneLabel">WhatsApp / teléfono</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+51 999 999 999"></label>
+      <label><span data-i18n="districtLabel">Distrito de entrega</span><select name="district" required><option value="" data-i18n="chooseDistrict">Selecciona un distrito</option><option>Miraflores</option><option>San Isidro</option><option>Barranco</option><option>Surco</option><option>San Borja</option><option>Otro distrito</option></select></label>
+      <label><span data-i18n="addressLabel">Dirección completa</span><input name="address" required autocomplete="street-address"></label>
+      <label><span data-i18n="startDateLabel">¿Cuándo te gustaría comenzar?</span><input name="date" type="date" required></label>
+      <label><span data-i18n="notesLabel">Preferencias florales (opcional)</span><textarea name="notes" rows="3" placeholder="Colores, flores favoritas, alergias…"></textarea></label>
+      <button class="button button-dark button-full" type="submit" data-i18n="confirmWhatsApp">Solicitar suscripción por WhatsApp ↗</button>
+      <p class="fine-print" data-i18n="subDialogNote">Confirmaremos cobertura, disponibilidad y condiciones antes de activar tu suscripción.</p>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
